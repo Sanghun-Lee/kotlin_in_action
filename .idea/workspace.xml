@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bebae111-8506-4b09-99a4-82205f8868b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KotlinInAction.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/Color.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/EnumClassKt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/Expr.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/META-INF/KotlinInAction.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/Num.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/Sum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/TestKt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/Color.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/ColorKt$WhenMappings.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/ColorKt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/Person$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/When$Companion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/When.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/WhenKt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/property/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EnumClass.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter_02/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter_02/enum_when/Color.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter_02/enum_when/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter_02/enum_when/When.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter_02/if_to_when/IfToWhen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter_02/if_to_when/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chapter_02/property/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1nt4CRO86l8yG4g1sSak8QuTzk7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager" selected="Application.WhenKt">
+    <configuration name="EnumClassKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="KotlinInAction" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="EnumClassKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WhenKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="KotlinInAction" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="chapter_02.enum_when.WhenKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WhenKt" />
+        <item itemvalue="Application.EnumClassKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bebae111-8506-4b09-99a4-82205f8868b6" name="Default Changelist" comment="" />
+      <created>1612195925566</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612195925566</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
