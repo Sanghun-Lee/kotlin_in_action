@@ -2,45 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bebae111-8506-4b09-99a4-82205f8868b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KotlinInAction.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/Color.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/EnumClassKt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/Expr.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/META-INF/KotlinInAction.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/Num.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/Sum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/TestKt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/Color.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/ColorKt$WhenMappings.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/ColorKt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/Person$Companion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/When$Companion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/When.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/enum_when/WhenKt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/KotlinInAction/chapter_02/property/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EnumClass.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter_02/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter_02/enum_when/Color.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter_02/enum_when/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter_02/enum_when/When.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter_02/if_to_when/IfToWhen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter_02/if_to_when/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chapter_02/property/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +82,14 @@
       <option name="presentableId" value="Default" />
       <updated>1612195925566</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1615570286821</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615570286821</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,5 +102,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>
