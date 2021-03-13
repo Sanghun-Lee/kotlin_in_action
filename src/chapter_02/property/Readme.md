@@ -10,7 +10,7 @@ class Person(val name: String)
 
 - 클래스의 기본 접근제한자는 **public**이다.
 
-- 코드 없이 데이터만 저장하는 클래스를 **값 객체 (value object)** 라고 부른다.
+- 위 Person과 같이 코드 없이 데이터만 저장하는 클래스를 **값 객체 (value object)** 라고 부른다.
 
 ## Property
 
@@ -21,6 +21,7 @@ class Person(val name: String)
 
 ```kotlin
 class Person(
+    age: Int,              // field, 그냥 매개변수 getter, setter없음.
     val name: String,       // field, getter만 생성 (val)
     var isMarried: Boolean  // field, getter, setter생성 (var)
 )

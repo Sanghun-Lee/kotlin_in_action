@@ -1,7 +1,5 @@
 package chapter_02.enum_when
 
-import Color
-
 class When {
     companion object {
         fun mix(c1: Color, c2: Color) {
