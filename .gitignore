@@ -19,6 +19,7 @@ out
 gen
 build
 rebel.xml
+lib
  
 # Compliled files
 /target/
