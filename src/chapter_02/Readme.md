@@ -12,3 +12,5 @@
 ## 2.4 while, for loop
 - 2.4.1 while loop
 - 2.4.2 범위와 수열 (.., downT, step)
+
+## 2.5 예외 처리
