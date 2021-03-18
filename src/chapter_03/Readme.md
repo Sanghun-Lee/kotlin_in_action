@@ -9,7 +9,7 @@
 
 ## 3.2 함수 호출
 
-- [package](./function_parameter)
+- [ReadMe](./function_parameter)
 - 이름을 붙인 인자
 - 디폴드 파라미터 값
 - @JvmOverloads
