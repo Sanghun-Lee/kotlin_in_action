@@ -6,6 +6,8 @@ fun ExtensionClass.printAllField() {
 //    println(encapsulate)
 }
 
+fun String.lastChar() = get(length - 1)
+
 fun main() {
     val ext = ExtensionClass(10)
     println(ext.multiplyValue())
