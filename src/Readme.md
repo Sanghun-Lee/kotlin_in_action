@@ -11,4 +11,5 @@
 ## Chater 3 - 함수 정의와 호출
 
 - [함수 호출](./chapter_03/function_parameter)
-- []
+- [파일 최상위에서 정의한 함수, 프로퍼티](./chapter_03/top_level)
+- [확장 함수](./chapter_03/extension_function)

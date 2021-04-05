@@ -63,13 +63,107 @@ val c = "Kotlin".last()
 
 ### 3.3.2 자바에서 확장 함수 호출
 
-- 내부적으로 확장 함수는 수신 객체를 첫 번재 인자로 받는 정적 메소드이다.
+- 내부적으로 확장 함수는 수신 객체를 첫 번재 인자로 받는 **정적 메소드**이다.
 
 - 그래서 자바에서 호출해도 그냥 클래스의 정적 메소드를 호출하는 것 처럼 사용하면 된다.
 
 ```java
-char c = ExtensionFunctionKt.lastChar("Java");
+char c=ExtensionFunctionKt.lastChar("Java");
 ```
 
-> JoinToStringExtension.kt : joinToString()을 확장 함수로 정의
+### 3.3.3 확장 함수로 joinToString정의
 
+> 예시 파일 : [JoinToStringExtension.kt](JoinToStringExtension.kt) 확인
+
+```kotlin
+fun <T> Collection<T>.joinToString() // 모든 타입의 collection에 대한 확장함수 정의 
+
+fun Collection<String>.join() // String타입의 collection에 대한 확장 함수 정의
+```
+
+### 3.3.4 확장 함수의 override
+
+- 예시 파일 : [ExtensionFunctionOverride.kt](ExtensionFunctionOverride.kt)
+
+- 확장 함수는 override가 불가능 하다.
+
+> 왜 확장 함수는 override가 불가능 할까?
+>
+> 이를 이해하기 위해선 **동적 디스패치**와 **정적 디스패치**에 대해서 알아야 한다.
+
+#### 동적 디스패치
+
+```kotlin
+open class View {
+    open fun click() = println("View Clicked")
+}
+
+class Button : View {
+    override fun click() = println("button clicked")
+}
+```
+
+- 위와 같은 부모, 자식 클래스가 있을 때
+
+```kotlin
+val view: View = Button()
+view.click()    // button clicked
+```
+
+- 다음과 같이 view의 click함수를 호출하면, view는 `View`타입의 변수이지만,
+- Button객체를 가지고있기 때문에, Button클래스의 click이 호출된다.
+
+> 이처럼 **실행 시점**에 변수가 가진 객체 타입에 따라 호출될 대상 메소드가 동적으로 변경되는 경우를 **동적 디스패치**라 한다.
+
+#### 정적 디스패치
+
+- 정적 디스패치는 동적 디스패치와 반대로
+
+> **컴파일 시점**에 변수 타입에 따라 정해진 메소드를 호출하는 것을 **정적 디스패치**라고 한다.
+
+### 확장 함수 override
+
+- 확장 함수는 호출한 변수의 타입에의해서만 확장 함수가 호출된다.
+- 즉, 변수가 Button객체를 가지고 있다 하더라도 해당 변수가 view타입인 경우, **view의 확장 함수가** 호출된다.
+- 확장 함수는 정적 디스패치 이다.
+- 그래서 확장 함수는 override가 되지 않는다.
+
+---
+
+### 3.3.5 확장 프로퍼티
+
+- 함수를 확장할 수 있는 것 처럼
+- 프로퍼티(변수)도 확장 할 수 있다.
+- 하지만 프로퍼티는 초기화 코드를 사용할 수 없기 때문에
+- 최소한 `getter`는 꼭 정의를 해야한다.
+
+```kotlin
+val String.lastChar: Char
+    get() = get(length - 1)
+```
+
+- String은 문자열 중 값 하나만 바꿀 수 없기 때문에
+- `StringBuilder`를 사용하면 맨 마지막 문자는 변경 가능해서 `var`로 프로퍼티를 만들 수 있다.
+
+```kotlin
+var StringBuilder.lastChar: Char
+    get() = get(length - 1)
+    set(value: Char) {
+        this.setCharAt(length - 1, value)
+    }
+```
+
+> 확장 프로퍼티의 사용
+
+```kotlin
+/* kotlin */
+println("Kotlin".lastChar)  // n
+val sb = StringBuilder("Kotlin?")
+sb.lastChar = "!"
+println(sb) // Kotlin!
+```
+
+```java
+/* java */
+StringUtilKt.getLastChar("Java")    // a
+```

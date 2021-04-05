@@ -9,6 +9,10 @@ public class TopLevel {
         list.add(1);
         list.add(2);
         list.add(3);
+        list.add(JoinKt.CHAPTER);
+
+        JoinKt.getVariable();
+        JoinKt.setVariable("set variable");
 
         String output = JoinKt.joinToString(list, ", ", "(", ")");
         System.out.println(output);

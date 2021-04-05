@@ -1,6 +1,7 @@
 package chapter_03.top_level
 
-const val CHAPTER = 3
+const val CHAPTER = 3   // Java에서는 public static final (상수)로 취급된다.
+var variable = "string data"    // getter, setter가 있는 변수로 취급된다.
 
 fun <T> joinToString(collection: Collection<T>, separator: String, prefix: String, postfix: String): String {
     val result = StringBuilder(prefix)
