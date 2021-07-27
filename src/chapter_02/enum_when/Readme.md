@@ -26,6 +26,7 @@ fun getDirection(d: Direction) =
 
 - 각각의 enum상수 (NORTH, SOUTH...)는 **object**이다.
 - 그래서 아래 예시와 같이 enum class의 인스턴스(객체)를 가질 수 있다.
+- `enum class ClassName`으로 클래스를 정의하고, `{}`내에서 바로 객체를 생성한다고 생각하면 될 것 같다.
 
 ```kotlin
 enum class Color(val r: Int, val g: Int, val b: Int) {
@@ -41,9 +42,13 @@ enum class Color(val r: Int, val g: Int, val b: Int) {
 }
 ```
 
+`enum class Color(변수 3개) <- Color enum 클래스 선언`
+
+`RED, ORANGE, YELLOW....`와 같은 Color 객체 생성
+
 ### Anonymous classes
 
-- 다음과 같이 작성할 수 있는데, 무슨 의미인지는 좀 더 봐야겠다.
+- 아래와 같이 enum class는 `추상메소드`를 가질 수 있는데, enum 객체를 생성할 때 바로 추상메소드를 재정의 할 수 있다?
 
 ```kotlin
 enum class ProtocolState {
