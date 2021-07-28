@@ -12,6 +12,7 @@
 - [ReadMe](kt_interface)
 - 코틀린 인터페이스
 - 코틀린 가시성 (접근제한자)
+- [내부 클래스](inner_class)
 
 ## 4.2
 
