@@ -38,7 +38,7 @@ enum class Color(val r: Int, val g: Int, val b: Int) {
     INDIGO(75, 0, 130),
     VIOLET(238, 130, 238);  // 메소드를 정의할 시 ';'를 붙여야 한다.
 
-    fun rgb() = (r * 256 + g) * 256 + b
+    fun rgb(): Int = (r * 256 + g) * 256 + b
 }
 ```
 
@@ -46,9 +46,22 @@ enum class Color(val r: Int, val g: Int, val b: Int) {
 
 `RED, ORANGE, YELLOW....`와 같은 Color 객체 생성
 
+Color enum class와 rgb() 메서드 사용
+
+```kotlin
+fun getRgb(color: Color): Int = color.rgb()
+
+// 외부에서 특정 필드 가져오기 (private이 아니어야 한다.)
+val indigoBlue = Color.INDIGO.b
+```
+
 ### Anonymous classes
 
 - 아래와 같이 enum class는 `추상메소드`를 가질 수 있는데, enum 객체를 생성할 때 바로 추상메소드를 재정의 할 수 있다?
+
+위에서 enum의 각각 아이템들은 object라고 하였다. 각 아이템들은 상위 enum class(Color, ProtocolState)를 상속받았다고 생각하면 되겠다.
+
+그런상황에서 상위 enum class(ProtocolState)가 추상메서드를 가지게 되면, 하위 enum class들(WAITING, TALKING...)은 해당 추상메서드를 재정의해야만 한다. 
 
 ```kotlin
 enum class ProtocolState {
@@ -108,10 +121,14 @@ fun mixOptimized(c1: Color, c2: Color) =
 ```java
 // java
 // Number -> Integer
-Number x = new Integer(10);
-if(x interface Integer) {
-    Integer y = (Integer)x;
-    y = // do someting
+class Casting {
+    public static void main(String[] args) {
+        Number x = new Integer(10);
+        if (x instanceof Integer) {
+            Integer y = (Integer) x;
+            y = 23; // do someting
+        }
+    }
 }
 ```
 
@@ -119,7 +136,7 @@ if(x interface Integer) {
 // kotlin
 val x : Number = 10
 if(x is Int) {
-    x = // do something
+    x = 2// do something
     // x는 Int타입으로 생각
 }
 ```

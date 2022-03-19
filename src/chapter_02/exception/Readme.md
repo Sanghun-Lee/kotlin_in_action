@@ -2,6 +2,8 @@
 
 > [Kotlin Exception Docs](https://kotlinlang.org/docs/exceptions.html)
 
+예외처리로 runCatching, 자원관리로 use등이 있는데 이는 나중에 다룬다.
+
 ## 예외 발생 - throw
 
 - 예외를 발생시키기 위해선 자바와 동일하게 `throw`를 사용하면 된다.
@@ -24,14 +26,20 @@ val percentage =
 fun readNumber(reader: BufferedReader): Int? {  // 해당 메소드가 예외를 발생시킨다는 throws문이 없다
     return try {
         val line = reader.readLine()
-        Integer.parseInt(line);
+        Integer.parseInt(line)
     } catch (e: NumberFormatException) {
-        null;
+        null
     } finally {
         reader.close()
     }
 }
 ```
+
+
+> 자바에선 해당 메서드가 예외를 처리하지 않고, 예외를 외부로 던질 경우, 메서드에 `throws`로 던질 예외를 명시해야 한다.
+>
+> 하지만, 코틀린은 예외를 던지지 않아도 내부에서 예외를 발생시키면 (throw IOException) 메서드명에 throws를 적지 않아도, 예외가 밖으로 전달된다.
+
 
 - BufferedReader의 close()는 IOException을 발생시킬 수 있는데, Java에서는 해당 예외를 무조건 처리해야만 한다. (Checked Exception이라서)
   하지만 stream을 닫다가 실패해도, 클라이언트 프로그램에서 할 수 있는 일은 없다. 그래서 코틀린은 Checked Exception이 없다.
@@ -39,7 +47,7 @@ fun readNumber(reader: BufferedReader): Int? {  // 해당 메소드가 예외를
 
 ```java
 public class ExceptionHandle {
-    public int readNumber(BufferedReader reader) throws NumberFormatException, IOException {
+    public int readNumber(BufferedReader reader) throws NumberFormatException {
         try {
             String line = reader.readLine();
             return Integer.parseInt(line);

@@ -38,7 +38,7 @@ do {
 #### 반개구간 [a, b) 형식으로 만들고 싶을 때
 
 - `until` 함수를 사용하면 된다.
-- x in 0 until size -> x in 0..size-1 과 동일하다.
+- x in 0 until size -> x in 0..size-1 과 동일하다. // in -> contains
 
 ---
 
