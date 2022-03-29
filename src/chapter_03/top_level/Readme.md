@@ -36,7 +36,22 @@ public class JoinKt {
 - java의 `public static final`타입으로 만들기 위해선 `const` 키워드를 붙여야 한다.
 
 ```kotlin
+/**
+ * Join.kt 파일
+ */
+
+// const 정의는 primitive type과 String type만 가능하다.
 const val UNIX_LINE_SEPARATOR = "\n"
+val value = "some String"
+```
+
+```text
+/**
+ * Join.kt에 정의한 최상위 프로퍼티, 변수 사용
+ */
+// ....
+System.out.println(Join.UNIX_LINE_SEPERATOR)
+System.out.println(Join.getValue())
 ```
 
 ### @JVMName
@@ -49,8 +64,8 @@ const val UNIX_LINE_SEPARATOR = "\n"
 
 package strings
 
-fun joinToString(...) {
-    ...
+fun joinToString(/* ... */) {
+    // ...
 }
 ```
 

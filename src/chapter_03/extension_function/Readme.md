@@ -68,12 +68,14 @@ val c = "Kotlin".last()
 - 그래서 자바에서 호출해도 그냥 클래스의 정적 메소드를 호출하는 것 처럼 사용하면 된다.
 
 ```java
-char c=ExtensionFunctionKt.lastChar("Java");
+char c = ExtensionFunctionKt.lastChar("Java");
 ```
 
 ### 3.3.3 확장 함수로 joinToString정의
 
 > 예시 파일 : [JoinToStringExtension.kt](JoinToStringExtension.kt) 확인
+
+확장 함수를 호출하는 객체의 타입을 더 한정지을 수 있다.
 
 ```kotlin
 fun <T> Collection<T>.joinToString() // 모든 타입의 collection에 대한 확장함수 정의 
@@ -123,10 +125,13 @@ view.click()    // button clicked
 
 ### 확장 함수 override
 
-- 확장 함수는 호출한 변수의 타입에의해서만 확장 함수가 호출된다.
+- 확장 함수는 호출한 변수의 타입에의해서만 확장 함수가 호출된다. -> 컴파일 시점에 호출되는 함수가 결정된다.
 - 즉, 변수가 Button객체를 가지고 있다 하더라도 해당 변수가 view타입인 경우, **view의 확장 함수가** 호출된다.
 - 확장 함수는 정적 디스패치 이다.
 - 그래서 확장 함수는 override가 되지 않는다.
+- 확장 함수는 변환될 때 첫 번째 인자로 자기자신을 가지기 때문에, 함수로 들어오는 파라미터들이 달라서 재정의가 안되는 것으로 알고있다.
+
+> ! 클래스 멤버와 확장함수가 같은이름, 같은 매개변수타입을 가진다면, 클래스 멤버의 함수가 먼저 호출된다.
 
 ---
 

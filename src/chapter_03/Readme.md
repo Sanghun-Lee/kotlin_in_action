@@ -28,3 +28,17 @@
 - java파일에서 확장 함수 호출
 - 확장 함수 override (불가능)
 - 확장 프로퍼티 - 클래스에 프로퍼티를 추가한다.
+
+## 3.4 컬렉션 처리
+
+- [Readme](./collection_process)
+- 가변길이 인자 (**vararg**)
+- 값의 쌍(pair)다루기
+- 중위 함수(infix function)
+
+## 3.5 문자열 정규식
+
+- [Readme](./regex)
+- 문자열 나누기(split)
+- 정규식
+- 3중 따옴표

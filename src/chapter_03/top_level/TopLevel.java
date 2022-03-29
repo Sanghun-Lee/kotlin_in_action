@@ -9,8 +9,9 @@ public class TopLevel {
         list.add(1);
         list.add(2);
         list.add(3);
-        list.add(JoinKt.CHAPTER);
+        list.add(JoinKt.CHAPTER); // const로 정의하면 자바에선 public static final 로 인식되어 바로 변수처럼 쓸 수 있다.
 
+        /* 프로퍼티의 경우, getXXX와 setXXX로 값을 가져오고 설정한다. */
         JoinKt.getVariable();
         JoinKt.setVariable("set variable");
 
