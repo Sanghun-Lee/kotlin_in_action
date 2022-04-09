@@ -17,6 +17,9 @@
 
 ## 4.2 생성자와 프로퍼티를 갖는 클래스 선언
 
+- [생성자 선언](constructor)
+- [부 생성자](constructor/secondary)
+- [프로퍼티 상속](property)
 
 
 ## 4.3

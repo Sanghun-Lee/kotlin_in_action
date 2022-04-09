@@ -13,3 +13,35 @@ class AccessModifier {
 //        whisper()    // protected 멤버에도 접근할 수 없다.
 //    }
 }
+
+open class TopParent {
+    val topParentProperty: Int = 10
+}
+
+open class Parent: TopParent() {
+    val parentProperty: Int = 20
+}
+
+class Child: Parent() {
+    val childProperty: Int = 30
+}
+
+var test: TopParent = Parent()
+
+fun main() {
+
+    when(test) {
+        is TopParent -> {
+            test.topParentProperty
+        }
+        is Parent -> {
+            test.topParentProperty
+//            test.parentProperty   // 스마트 캐스팅 불가능 -> 중간에 다른곳에서 객체의값이 변경될 수 있다.
+        }
+        is Child -> {
+            test.topParentProperty
+//            test.parentProperty // 스마트 캐스팅 불가능
+//            test.childProperty // 불가능
+        }
+    }
+}

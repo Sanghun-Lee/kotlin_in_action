@@ -34,3 +34,11 @@ sealed class에 속한 값에 대해서 when 식을 사용하면, 나중에 seal
 > sealed class를 자바에서 사용할 때에는 생성자가 private으로 접근을 제한 할 수 있지만,
 >
 > sealed interface는 자바에서 막을 수 있는 방법이 없기 때문에 사용할 수 없다 (kotlin 1.5에서는 가능)
+
+### sealed class와 enum class
+
+sealed class와 enum class는 사용이 비슷해 보인다. when식에도 제한되어서 사용되곤한다.
+
+하지만, enum class는 하나의 싱글 인스턴스를 가지지만, sealed class는 여러개의 인스턴스를 가질 수 있다.
+
+- enum class는 공통된 메서드를 가지지만, sealed class는 각각 상속된 클래스마다 각각의 메서드들을 가질 수 있다.

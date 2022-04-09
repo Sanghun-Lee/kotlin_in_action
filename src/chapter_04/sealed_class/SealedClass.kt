@@ -29,3 +29,57 @@ class SealedClass {
             // else 문을 쓰지 않아도 된다.
         }
 }
+
+// sealed class examples
+sealed class Event() {
+    init {
+        println("event object created")
+    }
+
+    object Start: Event()
+    object Finish: Event()
+    object Error: Event()
+}
+
+sealed class Item(open val value: String) {
+    init {
+        println("Item object created, value : ${this.value}")
+    }
+
+    class Confirm(override val value: String): Item(value) {
+        fun getString() = this.value
+    }
+
+    class Cancel(override val value: String): Item(value) {
+        fun getCancelValue() = this.value
+    }
+
+    object Ignore: Item("value")
+}
+
+fun main() {
+    val event: Event = Event.Start
+
+    // object로 싱글톤으로 만들었기 때문에, 같은 객체를 바라보고있다.
+    println("event == Event.start : ${event == Event.Start}") // true
+
+    val item: Item = Item.Confirm("yes")
+
+    // 다른 객체를 바라보고 있다.
+    println("item == Item.Confirm(yes) : ${item == Item.Confirm("yes")}") // false
+
+    val ignoreItem: Item = Item.Ignore
+
+    println("ignoreItem == Item.Ignore : ${ignoreItem == Item.Ignore}") // true
+
+    /**
+     * 출력 결과
+     * event object created
+     * event == Event.start : true
+     * Item object created, value : null
+     * Item object created, value : null
+     * item == Item.Confirm(yes) : false
+     * Item object created, value : value
+     * ignoreItem == Item.Ignore : true
+     */
+}

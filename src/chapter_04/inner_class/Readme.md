@@ -8,16 +8,16 @@
 
 ```kotlin
 class OutClass {
-    class StaticInnerClass {
+    class StaticInnerClass { // 정적 내부 클래스
         fun thisExample() {
             val staticInnerClassObject = this
             /* val outClassObject = this@OutClass // 불가능 */
         }
     }
-    inner class InnerClass {
+    inner class InnerClass { // 내부 클래스
         fun thisExample() {
             val innerClassObject = this
-            val outClassObject = this@OutClass
+            val outClassObject = this@OutClass // 외부 클래스 객체를 참조할 수 있다.
         }
     }
 }
@@ -32,7 +32,7 @@ class OutClass {
 >
 > `JavaInnerClass.java`
 >
-> Java에서 내부 클래스의 경우 외부 클래스가 생성되어야 사용가능해서 묵시적으로 외부 클래스를 참조한다. (this@OUtClass)
+> Java에서 내부 클래스의 경우 외부 클래스가 생성되어야 사용가능해서 묵시적으로 외부 클래스를 참조한다. (this@OutClass)
 >
 > 그래서 내부 클래스를 직렬화 할 때 내부 클래스가 외부 클래스도 참조하기 때문에, 외부 클래스가 직렬화 되지 못하고
 >

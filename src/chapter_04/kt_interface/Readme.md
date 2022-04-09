@@ -59,10 +59,29 @@ class Button : Clickable {
 
 `final override fun click() { }`
 
+### 추상 클래스의 상속제어 변경자
+
 - 추상클래스, 추상메소드는 기본적으로 `open`상태이다.
+- 추상클래스에 속한 추상메서드가 아닌, 정의되어있는 메서드들도 기본적으로 `open`상태이다.
+- 인터페이스 멤버들은 항상 열려있기 때문에, `final`을 정의할 수 없다.
+
+### open 클래스의 스마트 캐스팅
+
+예시 파일 : [AccessModifier.kt](AccessModifier.kt)
+
+open 메서드를 가진 var변수는 스마트 캐스팅이 불가능하다.
+
+왜냐하면 다른곳에서 객체의 값이 변경될 수 있기 때문에, `final`클래스만 스마트 캐스팅이 가능하다.
+
+이것도 [chapter2 IfToWhen](../../chapter_02/if_to_when/IfToWhen.kt) 처럼 지역변수면 상황에 따라 가능하고, 전역변수면 아예 불가능하다.
+
+
+---
 
 ### 가시성 변경자: 기본적으로 공개 (public, private...)
 
+> 예시 파일 : [AccessModifier.kt](AccessModifier.kt)
+>
 > 코틀린의 기본 visibility는 `public`이다.
 
 - 접근 제한자 (최상위 선언 : 클래스 외부에서의 선언)
@@ -79,6 +98,8 @@ class Button : Clickable {
 > 모듈사이의 캡슐화를 위해서 internal이 존재한다.
 
 - protected가 자바와 다르다는점을 기억해야한다! (자바는 같은 패키지내에서 모두 접근할 수 있다.)
+- public으로 선언된 함수에서 클래스의 private이나, protected, internal로 된 멤버는 접근할 수 없다 (확장함수로도 마찬가지)
 
-- 확장함수의 경우 해당 클래스의 `private`이나, `protected`멤버는 접근할 수 없다.
+#### 코틀린의 가시성과 자바
 
+- 자바엔 private 클래스가 없기 때문에, 내부적으로 private 클래스를 패키지 전용 클래스로 컴파일 한다.
