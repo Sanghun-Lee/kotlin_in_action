@@ -113,10 +113,9 @@ fun mixOptimized(c1: Color, c2: Color) =
 ### is == instanceof
 
 - java의 instanceof를 코틀린으로 하면 is이다.
-
 - java의 경우 instanceof로 해당타입을 확인하고, 강제캐스팅을 통해 타입변환을 해야한다.
-
-- 그런데 kotlin은 is로 타입을 한 번 확인하면 강제 캐스팅코드 없이도 해당 타입 변수로 생각해준다.
+- 그런데 kotlin은 is로 타입을 한 번 확인하면 강제 캐스팅코드 없이도 해당 타입 변수로 생각해준다
+- 스마트 캐스팅은 var 변수에는 해당하지 않는것으로 알고있었는데, 지금은 잘 동작한다.(v1.6.0)
 
 ```java
 // java

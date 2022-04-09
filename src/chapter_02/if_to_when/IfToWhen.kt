@@ -38,4 +38,30 @@ fun evalWithLogging(e: Expr): Int =
         else -> throw IllegalArgumentException("unknown expression")
     }
 
-class IfToWhen {}
+var nullableGlobalValue: Num? = null
+
+fun getNullableNum(): Num? = Num(10)
+fun getNonNullableNum(): Num = Num(20)
+
+fun main() {
+    var expr: Expr = Num(10)
+    when(expr) {
+        is Num -> {
+//            expr = Sum(Num(10), Num(20)) // 해당 코드가 있으면 아래 .value문은 에러가 발생한다.
+            println(expr.value) // var 타입이라도 스마트 캐스팅이 가능하다.
+        }
+    }
+
+    var nullableValue: Num? = null
+
+    if(nullableValue != null) {
+        nullableValue = getNonNullableNum() // 캐스팅 가능
+//        nullableValue = getNullableNum() // non-null 캐스팅 불가능
+        println(nullableValue.value)
+    }
+
+    if(nullableGlobalValue != null) {
+//        println(nullableGlobalValue.value) // 해당 코드는 non-null하지 않게 된다.
+
+    }
+}
