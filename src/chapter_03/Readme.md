@@ -38,7 +38,7 @@
 
 ## 3.5 문자열 정규식
 
-- [Readme](./regex)
+- [Readme](./regex/Readme.md)
 - 문자열 나누기(split)
 - 정규식
 - 3중 따옴표

@@ -4,7 +4,7 @@ package chapter_03.regex
  * 로컬 함수
  * 함수 내부에 함수를 작성할 수 있다.
  * DRY(Don't Repeat Yourself)원칙을 피하기 위해서 중복되는 코드는 함수로 빼는것이 좋지만,
- * 클래스 내부에 함수가 많아지면 코드 이해하기가 힘들기 때문에, 사용하면 유용하다.
+ * 클래스 내부에 함수가 많아지면 코드 이해하기가 힘들기 때문에, 로컬 함수로 함수 호출영역을 제한하면서 1depth만 사용하면 유용하다.
  */
 class User(val id: Int, val name: String, val address: String)
 

@@ -49,7 +49,7 @@ class Button : Clickable {
 >
 > 부모 클래스의 변경에 의해 자식 클래스가 영향을 받는 현상을 취약한 기반 클래스 문제 라고 부른다.
 >
-> [KtInterfaceJavaCompatibility.java](KtInterfaceJavaCompatibility.java)의 FragileBaseCalss 참고
+> [KtInterfaceJavaCompatibility.java](KtInterfaceJavaCompatibility.java)의 FragileBaseClass 참고
 
 클래스가 취약할 수 있기 때문에, 왠만하면 상속을 금지하는것이 좋다 (Effective Java 中)
 
