@@ -9,18 +9,16 @@
 
 ## 4.1 클래스 계층 정의
 
-- [ReadMe](kt_interface/Readme.md)
-- 코틀린 인터페이스
-- 코틀린 가시성 (접근제한자)
-- [내부 클래스](inner_class)
-- [sealed class](sealed_class)
+- [코틀린 인터페이스](kt_interface/Readme.md)
+- [코틀린 가시성 (접근제한자)](kt_interface/Readme.md#가시성-변경자-기본적으로-공개-public-private)
+- [내부 클래스](inner_class/Readme.md)
+- [sealed class](sealed_class/Readme.md)
 
 ## 4.2 생성자와 프로퍼티를 갖는 클래스 선언
 
-- [ReadMe](constructor/Readme.md)
-- [생성자 선언](constructor)
-- [부 생성자](constructor/secondary)
-- [프로퍼티 상속](property)
+- [생성자 선언](constructor/Readme.md)
+- [부 생성자](constructor/secondary/Readme.md)
+- [프로퍼티 상속](property/Readme.md)
 
 
 ## 4.3 컴파일러가 생성한 메서드

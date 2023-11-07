@@ -1,4 +1,4 @@
-# Data Class
+## 4.3 Data Class
 
 ### 모든 클래스가 재정의 할 수 있는 메서드
 
