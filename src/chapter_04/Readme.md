@@ -26,3 +26,4 @@
 - [Data Class](data_class/Readme.md)
 - [Class Delegate](class_delegate/Readme.md)
 - [Object](object/Readme.md)
+- [Companion Object](object/Readme.md#companion-object)
