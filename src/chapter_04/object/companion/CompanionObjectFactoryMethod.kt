@@ -1,4 +1,4 @@
-package chapter_04.`object`
+package chapter_04.`object`.companion
 
 /**
  * As-is
