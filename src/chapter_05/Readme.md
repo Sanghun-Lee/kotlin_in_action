@@ -12,3 +12,6 @@
 - [람다와 컬렉션](./collection/Readme.md)
 - [람다의 포획](./capture/Readme.md)
 - [멤버 참조](./reference/Readme.md)
+
+## 5.2 컬렉션 함수형 API
+
