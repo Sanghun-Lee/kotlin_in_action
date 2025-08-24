@@ -15,3 +15,9 @@
 
 ## 5.2 컬렉션 함수형 API
 
+- [컬렉션 함수 라이브러리들](./api/Readme.md)
+
+## 5.3 지연 계산 Sequence
+
+- [지연 계산](./sequence/Readme.md)
+- [Sequence의 연산 실행](./sequence/operation/Readme.md)
