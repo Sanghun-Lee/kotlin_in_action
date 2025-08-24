@@ -21,3 +21,6 @@
 
 - [지연 계산](./sequence/Readme.md)
 - [Sequence의 연산 실행](./sequence/operation/Readme.md)
+
+## 5.4 자바 함수형 인터페이스 사용
+

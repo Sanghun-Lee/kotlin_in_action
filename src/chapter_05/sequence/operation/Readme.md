@@ -62,6 +62,27 @@ stream : collect(Collectors.toList()) / sequence : toList()
 > 
 > 그래서 1초 block되는 100개의 작업을 commonPool에서 동작하면, 4코어 cpu의 경우 34초 걸립니다. (100초 / 3)
 > 
-> 하지만, commonPool의 개수가 1개인 경우, 작업이 submit되면 매번 새로운 thread를 생성해서, 동일한 작업을 수행할 시 1초 소요됩니다.
+> 하지만, Cpu core 개수가 2개인 경우, commonPool은 1개가 되고, 작업이 submit되면 매번 새로운 thread를 동작을 수행합니다.
+> 
+> (Cpu core 개수가 1개라면, commonPool은 0개가 되고, 작업은 submit을 수행한 thread에서 수행된다.)
+> 
+> 그래서 동일한 동작을 수행하게되면 100개의 새로운 thread가 생성되고, 1초만에 작업이 끝나게됩니다.
 > 
 > 그래서 cpu core 수에 따라 다르게 동작할 수 있기 때문에 주의해서 사용해야 합니다.
+
+---
+
+## 5.3.2 시퀀스 만들기
+
+Collection에 `asSequence()`함수를 이용하여 시퀀드를 만들어 왔다.
+
+Sequence를 만드는 또 다른 방법으로 `generateSequence` 함수를 사용할 수 있다.
+
+```kotlin
+/**
+ * public fun <T : Any> generateSequence(seed: T?, nextFunction: () -> T?): Sequence<T>
+ */
+val naturalNumbers = generateSequence(0) { it + 1 }
+val numbersTo100 = naturalNumbers.takeWhile { it <= 100 }
+println(numbersTo100.sum()) // 5050
+```
