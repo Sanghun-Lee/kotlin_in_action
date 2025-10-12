@@ -1,5 +1,9 @@
 package chapter_05.java_sam.lambda
 
+const val CONST_VALUE = "const value"
+object Const {
+    const val OBJECT_VALUE = "objectValue"
+}
 fun main() {
     repeat(20) {
         postponeComputation(1000L) {
@@ -25,8 +29,18 @@ fun main() {
     }
     println()
     repeat(20) {
-        postponeComputation2(5000L) { println() }
+        postponeComputation2(5000L) { println(CONST_VALUE) }
     }
+
+    fun simpleTest(): String {
+        val a = 10
+        return Const.OBJECT_VALUE.repeat(a)
+    }
+    println()
+    repeat(20) {
+        postponeComputation2(6000L) { println(simpleTest()) }
+    }
+
 }
 
 fun postponeComputation(delay: Long, clickListener: OnClickListener) {
