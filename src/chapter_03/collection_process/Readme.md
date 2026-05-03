@@ -34,6 +34,22 @@ fun main(args: Array<String>) {
 }
 ```
 
+#### spread 연산자의 동작 및 비용
+
+- `*` 연산자는 내부적으로 배열 복사를 이용해서 배열을 푼다.
+
+```Java
+// 디컴파일된 자바 파일
+// Arrays.copyOf()를 이용해 배열을 통째로 복사해서 넘깁니다.
+printNumbers(Arrays.copyOf(arr, arr.length));
+```
+
+그래서 시간복잡도는 `O(N)`이라서 긴 배열의 경우 주의가 필요하다.
+
+- Q. 그러면 vararg를 지양해야하지 않은가
+- A. 맞다. 라이브러리를 만들고, 인자가 몇개 없다면 쓰는게 좋다.
+  - ex. listOf(1, 2, 3) vs listOf(arrayOf(1, 2, 3))
+
 ## 값의 쌍 다루기 (pair)
 
 `to` 단어는 키워드가 아니라, `중위 호출(infix call)`이라는 방법으로 메서드를 호출하는 것이다.
