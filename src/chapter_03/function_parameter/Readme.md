@@ -52,6 +52,45 @@ joinToString(list, postfix = ";", prefix = "#")
 // output : # 1, 2, 3;
 ```
 
+- Java에서의 처리
+
+파라미터의 기본값을 지정했을 때 컴파일 시 Java파일에서는 아래와 같이 처리된다.
+
+1. 인자가 nullable한 함수와 non-nullable한 함수 두 개가 만들어진다.
+2. 인자값을 생략하고 호출 시 null값을 넣는다.
+3. nullable한 함수에는 int형의 추가인자가 존재하는데, 비트마스킹으로 해당 인자에 값이 있는지 체크한다.
+4. `비트마스킹`을 이용해서 인자가 있는지 확인하고, 없다면 기본값을 넣은 후 non-nullable한 함수를 호출한다.
+
+```Java
+/**
+ * kotlin
+ * fun greet(name: String = "Guest", age: Int = 20) {
+ *     println("Hello $name, $age years old.")
+ * }
+ */
+
+// ① 실제 로직을 수행하는 '진짜' 함수
+public static final void greet(@NotNull String name, int age) {
+    Intrinsics.checkNotNullParameter(name, "name");
+    System.out.println("Hello " + name + ", " + age + " years old.");
+}
+
+// ② 기본값을 세팅해 주는 브릿지(Bridge) 함수 (이름 뒤에 $default가 붙음)
+public static /* synthetic */ void greet$default(String name, int age, int mask, Object marker) {
+    
+    // 비트 연산(&)을 통해 어떤 매개변수가 생략되었는지 확인합니다.
+    if ((mask & 1) != 0) { 
+        name = "Guest"; // 첫 번째 매개변수가 생략되었다면 기본값 할당
+    }
+    if ((mask & 2) != 0) { 
+        age = 20;       // 두 번째 매개변수가 생략되었다면 기본값 할당
+    }
+    
+    // 기본값이 다 채워지면 비로소 '진짜' 함수를 호출합니다.
+    greet(name, age);
+}
+```
+
 ## @JvmOverloads
 
 - Java에는 default parameter라는 개념이 없다.
